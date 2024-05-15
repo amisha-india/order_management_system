@@ -1,6 +1,5 @@
 import pyodbc
 
-
 class DBConnUtil:
     @staticmethod
     def getDBConn():
@@ -12,6 +11,6 @@ class DBConnUtil:
                 "Trusted_Connection=yes;"
             )
             return connection
-        except Exception as e:
+        except pyodbc.Error as e:
             print("Error connecting to database:", e)
             return None
