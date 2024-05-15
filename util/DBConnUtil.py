@@ -3,7 +3,7 @@ from util.DBPropertyUtil import PropertyUtil
 
 
 # When new object -> new connection
-class DBConnection:
+class DBConnUtil:
     def __init__(self):
         conn_str = PropertyUtil.get_property_string()
         self.conn = pyodbc.connect(conn_str)
